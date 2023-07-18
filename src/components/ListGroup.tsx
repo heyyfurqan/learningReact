@@ -12,7 +12,8 @@ export default function ListGroup() {
     "Moscow",
   ];
 
-  const handleClick = (event: MouseEvent) => console.log(event); 
+  const handleClick = (event: MouseEvent) => console.log(event);
+  const selectedIndex = 2;
 
   return (
     <>
@@ -23,10 +24,14 @@ export default function ListGroup() {
         </>
       )}
       <ul className="list-group">
-        {items.map((item) => (
+        {items.map((item, index) => (
           <li
             key={item}
-            className="list-group-item"
+            className={
+              selectedIndex === index
+                ? "list-group-item active"
+                : "list-group-item"
+            }
             onClick={handleClick}
           >
             {item}
