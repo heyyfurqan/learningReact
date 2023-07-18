@@ -1,13 +1,9 @@
-import Message from "./Message";
-import Button from "./Button";
-import ListView from "./ListView";
+import ListGroup from "./components/ListGroup";
 
 export default function App() {
   return (
     <div>
-      <Message/>
-      <Button/>
-      <ListView/>
+      <ListGroup />
     </div>
   );
 }
