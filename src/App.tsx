@@ -1,6 +1,6 @@
-import ListGroup from "./components/ListGroup/ListGroup";
-import Alert from "./components/Alert";
-import { PropsWithChildren } from "react";
+import Like from './components/Like';
+
+import './App.css'
 
 export default function App() {
   
@@ -19,6 +19,8 @@ export default function App() {
   }
 
   return (
-    <ListGroup items={items} heading="Cities" onSelectItem={handleSelectItem}/>
+    <div>
+      <Like onClick={() => console.log('huehue')}/>
+    </div>
   );
 }
