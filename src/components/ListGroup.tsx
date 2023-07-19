@@ -1,22 +1,17 @@
 import { useState } from "react";
 
-export default function ListGroup() {
-  let items = [
-    "New York",
-    "Rio De Janeiro",
-    "Tokyo",
-    "Berlin",
-    "Nairobi",
-    "Helsinki",
-    "Oslo",
-    "Moscow",
-  ];
+interface Props{
+  items: string[];
+  heading: string;
+}
+
+export default function ListGroup({items, heading}: Props) {
 
   const [selectedIndex, setSelectedIndex] = useState(2);
 
   return (
     <>
-      <h1>Cities</h1>
+      <h1>{heading}</h1>
       {items.length === 0 && (
         <>
           <p>No cities found</p>
