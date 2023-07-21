@@ -1,5 +1,4 @@
-import React from "react";
-import expenses, { categories } from "../../App";
+import { categories } from "../../App";
 
 const ExpenseForm = () => {
   return (
